@@ -1,0 +1,24 @@
+{
+  "name": "gitcopy",
+  "version": "1.0.0",
+  "description": "A Node script to copy all repos from a user's GitHub account to another account",
+  "main": "main.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs": "0.0.1-security",
+    "node-cmd": "^1.2.0",
+    "node-fetch": "^1.6.3",
+    "path": "^0.12.7",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "git",
+    "copy"
+  ],
+  "author": "Joey Pinhas",
+  "license": "MIT"
+}
