@@ -9,6 +9,7 @@ In order to use this script, clone this repo and run `npm i`.
 You will need an OAuth token with repo access on your account, which can be generated from your account's settings page. You want to create a Personal Access Token for your account, and input it when the script requests it.
 
 Here's how you'd do it:
+
 1. Navigate to [your Git GA's settings page](https://git.generalassemb.ly/settings/profile)
 2. Select `Personal Access Tokens` from the menu on the left side
 3. Click `Generate New Token` and enter your password again
