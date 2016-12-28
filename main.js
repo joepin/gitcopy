@@ -12,11 +12,6 @@ let doAnother = false;
 let base = `https://git.generalassemb.ly/api/v3/user/repos?per_page=100`;
 // token will be populated after the prompts run
 let token = '';
-// headers are always constant
-let headers = {
-  'Content-Type': 'application/json',
-  'Authorization': `token ${token}`,
-};
 // for paginated requests; simpler than having to parse the link header
 let page = 1;
 // empty array to hold all the repo data
@@ -53,6 +48,11 @@ function checkIfNext(res) {
 
 // fetches the user's repos and calls doClone on them
 function doFetch(url) {
+  // set headers with token from the global variable
+  let headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `token ${token}`,
+  };
   // set the control flag to false
   doAnother = false;
   // fetch the passed in url with the global headers object
