@@ -17,6 +17,9 @@ let page = 1;
 // empty array to hold all the repo data
 let raw = [];
 
+// allows fetch calls to be made to a server with improper/invalid/self-signed SSL certificates
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 // prompts the user for their OAuth token which they generated on their own accounts and saves it in the global token var.
 // doPrompts calls doFetch on the base URL when it completes
 function doPrompts() {
