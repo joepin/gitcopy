@@ -44,9 +44,12 @@ function doPrompts() {
 
 // helper method to check the link header of the response from GH server to see if there is a next link
 function checkIfNext(res) {
-  const links = res.headers._headers.link;
-  const hasNext = links[0].includes('rel="next"');
-  return hasNext;
+  if (res.headers._headers.link) {
+    const links = res.headers._headers.link;
+    const hasNext = links[0].includes('rel="next"');
+    return hasNext;
+  }
+  return false;
 }
 
 // fetches the user's repos and calls doClone on them
